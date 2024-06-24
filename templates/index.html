@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block 'title' %}
+ welcome to DBlogger site
+{%endblock%}
+
+{%block 'content' %}
+<section class="banner">
+       <div class="curtain"></div>
+       <video src="{% static 'videos/banner.mp4'%}"  autoplay loop muted></video>
+    <h1>Post to Earn</h1>
+    <span>
+        <a href="{% url 'create-post' %}">Create Post</a>
+        <a href="">View Posts</a>
+    </span>
+</section>
+{%endblock%}

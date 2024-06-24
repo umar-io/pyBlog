@@ -1,0 +1,17 @@
+{%extends 'base.html' %} 
+{%block 'title' %} 
+Create Post 
+{%endblock%}
+
+{%block 'content' %}
+   <section>
+    <h1>Post your mind today</h1>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.title}}
+        {{form.image}}
+        {{form.body}}
+        <button type="submit">POST</button>
+    </form>
+   </section>
+{% endblock %}

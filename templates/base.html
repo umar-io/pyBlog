@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block 'title' %} {%endblock%}</title>
+    <link rel="stylesheet" href="{%static 'css/app.css'%}">
+</head>
+<body>
+    <header>
+        <h3>DBlogger</h3>
+        <nav>
+            <a href="">Home </a>
+            <a href="">About us</a>
+            <a href="{% url 'create-post' %}">Create a Post</a>
+            <a href=""> All post</a>
+            <a href="">Contact Us</a>
+            <a href="">Donate</a>
+        </nav>
+    </header>
+    <main>
+         {%block 'content' %} {%endblock%}
+    </main>
+    <footer>
+        <p>&copy; Copyright all rights reserved. Powered by codeprof academy</p>
+    </footer>
+    <script src="{%static 'js/app.css'%}"></script>
+</body>
+</html>
